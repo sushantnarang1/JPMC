@@ -1,0 +1,24 @@
+{
+  "provider": "LM Studio",
+  "models": [
+    {
+      "id": "qwen/qwen3.6-35b-a3b",
+      "intended_capability": "General-purpose chat and RAG generation",
+      "model_type": "chat",
+      "approved_for_platform_use": true
+    },
+    {
+      "id": "qwen/qwen2.5-coder-14b",
+      "intended_capability": "Infrastructure code review and chat",
+      "model_type": "chat",
+      "approved_for_platform_use": true
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "intended_capability": "Text embeddings for local RAG",
+      "model_type": "embedding",
+      "approved_for_platform_use": true
+    }
+  ],
+  "notes": "Availability is checked dynamically against LM Studio /v1/models. Discovery does not imply successful inference or Kubernetes deployment."
+}

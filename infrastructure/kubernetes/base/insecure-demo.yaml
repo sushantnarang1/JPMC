@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: modelops-review-demo
+  labels:
+    app: modelops-review-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: modelops-review-demo
+  template:
+    metadata:
+      labels:
+        app: modelops-review-demo
+    spec:
+      hostNetwork: true
+      containers:
+        - name: demo
+          image: nginx:latest
+          securityContext:
+            privileged: true
+            allowPrivilegeEscalation: true
+          ports:
+            - containerPort: 80
